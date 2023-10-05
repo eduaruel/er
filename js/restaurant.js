@@ -132,8 +132,8 @@ function agreagarOrden(producto) {
 
         } else {
             //caso  que no  exista el producto
-            //agregago el nuevo
-            cliente.pedido = { ...pedido, producto };
+            //agregamo el nuevo
+            cliente.pedido = [...pedido, producto ];
             console.log(cliente);
         }
     } else {
@@ -194,11 +194,11 @@ function actualizarResume() {
         const lista = document.createElement('li');
         lista.classList.add('list-group-item')
 
-        const nombreP = documento.createElement('h4');
+        const nombreP = document.createElement('h4');
         nombreP.textContent = nombre;
         nombreP.classList.add('text-center', 'my-4');
 
-        const cantidadP = documente.createElement('p');
+        const cantidadP = document.createElement('p');
         cantidadP.classList.add('fw-bold');
         cantidadP.textContent = 'cantidad';
 
@@ -210,7 +210,7 @@ function actualizarResume() {
         precioP.textContent = 'Precio';
 
         const precioValor = document.createElement('span');
-        precioValor.textContent = '$$(precio)';
+        precioValor.textContent = `$${precio}`;
 
 
     })
